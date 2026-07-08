@@ -1,0 +1,17 @@
+Skipping image OS validation for hb__4f021b4123adfce0ed970ed57486d41a: docker inspect returned 1
+Collecting main service artifacts
+Failed to download artifact '/app/report.json' from service 'main' (best-effort)
+Traceback (most recent call last):
+  File "/home/codespace/.local/share/uv/tools/harbor/lib/python3.12/site-packages/harbor/trial/artifact_handler.py", line 330, in _download_artifact
+    await source_env.service_download_file(
+  File "/home/codespace/.local/share/uv/tools/harbor/lib/python3.12/site-packages/harbor/environments/docker/docker.py", line 1025, in service_download_file
+    await self.download_file(source_path, target_path)
+  File "/home/codespace/.local/share/uv/tools/harbor/lib/python3.12/site-packages/harbor/environments/docker/docker.py", line 1010, in download_file
+    await self._platform.download_file(source_path, target_path)
+  File "/home/codespace/.local/share/uv/tools/harbor/lib/python3.12/site-packages/harbor/environments/docker/docker_unix.py", line 185, in download_file
+    await self._env._run_docker_compose_command(
+  File "/home/codespace/.local/share/uv/tools/harbor/lib/python3.12/site-packages/harbor/environments/docker/docker.py", line 631, in _run_docker_compose_command
+    raise RuntimeError(
+RuntimeError: Docker compose command failed for environment log-report. Command: docker compose --project-name log-report__wspbd3y__env --project-directory /workspaces/log-report-task/log-report-task/log-report/environment -f /tmp/tmp8gthufal/log-report__WspbD3Y__env-docker-compose-resources.json -f /home/codespace/.local/share/uv/tools/harbor/lib/python3.12/site-packages/harbor/environments/docker/docker-compose-build.yaml -f /tmp/tmpp7h8k1it/docker-compose-mounts.json -f /home/codespace/.local/share/uv/tools/harbor/lib/python3.12/site-packages/harbor/environments/docker/docker-compose-egress-control.yaml -f /tmp/tmp26e9lk62/docker-compose-egress-control-services.json cp main:/app/report.json jobs/2026-07-08__03-33-30/log-report__WspbD3Y/artifacts/app/report.json. Return code: 1. Stdout:  log-report__wspbd3y__env-main-1 copy log-report__wspbd3y__env-main-1:/app/report.json to jobs/2026-07-08__03-33-30/log-report__WspbD3Y/artifacts/app/report.json Copying
+Error response from daemon: Could not find the file /app/report.json in container 8ae3634a77e675c9ab9a3ba331b3f15a48af729e1226a833e70a11d508251df9
+. Stderr: None. 

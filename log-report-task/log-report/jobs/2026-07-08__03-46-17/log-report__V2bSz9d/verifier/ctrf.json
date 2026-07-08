@@ -1,0 +1,59 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 4,
+            "passed": 3,
+            "failed": 1,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1783482388.6992397,
+            "stop": 1783482388.7652764
+        },
+        "tests": [
+            {
+                "name": "test_outputs.py::test_findings_saved",
+                "status": "passed",
+                "duration": 0.0009323459998995531,
+                "start": 1783482388.7183335,
+                "stop": 1783482388.7196977,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_request_count_reported",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.002012108000144508,
+                "start": 1783482388.7200208,
+                "stop": 1783482388.7621233,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_request_count_reported():\n        \"\"\"instruction.md: \"how many requests there were\".\"\"\"\n        report = _load_report()\n        expected = _expected_stats()\n        assert \"total_requests\" in report, \"report.json is missing 'total_requests'\"\n>       assert report[\"total_requests\"] == expected[\"total_requests\"], (\n            f\"total_requests: got {report['total_requests']!r}, \"\n            f\"expected {expected['total_requests']!r}\"\n        )\nE       AssertionError: total_requests: got 999999, expected 6\nE       assert 999999 == 6\n\n/tests/test_outputs.py:66: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_clients_reported",
+                "status": "passed",
+                "duration": 0.0008387130001210608,
+                "start": 1783482388.7623925,
+                "stop": 1783482388.7634768,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_popular_pages_reported",
+                "status": "passed",
+                "duration": 0.001008808999813482,
+                "start": 1783482388.7637563,
+                "stop": 1783482388.7649977,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            }
+        ]
+    }
+}

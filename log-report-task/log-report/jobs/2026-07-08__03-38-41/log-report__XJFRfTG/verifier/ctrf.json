@@ -1,0 +1,68 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 4,
+            "passed": 0,
+            "failed": 4,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1783481932.1891892,
+            "stop": 1783481932.2728963
+        },
+        "tests": [
+            {
+                "name": "test_outputs.py::test_findings_saved",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0013878760000807233,
+                "start": 1783481932.2105272,
+                "stop": 1783481932.2479477,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_findings_saved():\n        \"\"\"instruction.md: \"Save your findings so they can be reviewed.\"\n    \n        A finding that can't be located or parsed can't be reviewed, so this\n        checks the report exists and is valid, parseable JSON.\n        \"\"\"\n>       report = _load_report()\n                 ^^^^^^^^^^^^^^\n\n/tests/test_outputs.py:57: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\n    def _load_report():\n>       assert REPORT_PATH.exists(), \"no report.json found\"\nE       AssertionError: no report.json found\nE       assert False\nE        +  where False = exists()\nE        +    where exists = PosixPath('/app/report.json').exists\n\n/tests/test_outputs.py:44: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_request_count_reported",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0009286510003221338,
+                "start": 1783481932.2483878,
+                "stop": 1783481932.2556598,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_request_count_reported():\n        \"\"\"instruction.md: \"how many requests there were\".\"\"\"\n>       report = _load_report()\n                 ^^^^^^^^^^^^^^\n\n/tests/test_outputs.py:63: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\n    def _load_report():\n>       assert REPORT_PATH.exists(), \"no report.json found\"\nE       AssertionError: no report.json found\nE       assert False\nE        +  where False = exists()\nE        +    where exists = PosixPath('/app/report.json').exists\n\n/tests/test_outputs.py:44: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_clients_reported",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0009005880001495825,
+                "start": 1783481932.2560265,
+                "stop": 1783481932.2628527,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_clients_reported():\n        \"\"\"instruction.md: \"the clients involved\".\"\"\"\n>       report = _load_report()\n                 ^^^^^^^^^^^^^^\n\n/tests/test_outputs.py:74: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\n    def _load_report():\n>       assert REPORT_PATH.exists(), \"no report.json found\"\nE       AssertionError: no report.json found\nE       assert False\nE        +  where False = exists()\nE        +    where exists = PosixPath('/app/report.json').exists\n\n/tests/test_outputs.py:44: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_popular_pages_reported",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0010816950002663361,
+                "start": 1783481932.263218,
+                "stop": 1783481932.2712698,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_popular_pages_reported():\n        \"\"\"instruction.md: \"which pages were popular\".\"\"\"\n>       report = _load_report()\n                 ^^^^^^^^^^^^^^\n\n/tests/test_outputs.py:85: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\n    def _load_report():\n>       assert REPORT_PATH.exists(), \"no report.json found\"\nE       AssertionError: no report.json found\nE       assert False\nE        +  where False = exists()\nE        +    where exists = PosixPath('/app/report.json').exists\n\n/tests/test_outputs.py:44: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            }
+        ]
+    }
+}

@@ -1,0 +1,31 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.13, pytest-8.4.1, pluggy-1.6.0
+rootdir: /tests
+plugins: json-ctrf-0.3.5
+collected 4 items
+
+../tests/test_outputs.py .F..                                            [100%]
+
+=================================== FAILURES ===================================
+_________________________ test_request_count_reported __________________________
+
+    def test_request_count_reported():
+        """instruction.md: "how many requests there were"."""
+        report = _load_report()
+        expected = _expected_stats()
+        assert "total_requests" in report, "report.json is missing 'total_requests'"
+>       assert report["total_requests"] == expected["total_requests"], (
+            f"total_requests: got {report['total_requests']!r}, "
+            f"expected {expected['total_requests']!r}"
+        )
+E       AssertionError: total_requests: got 999999, expected 6
+E       assert 999999 == 6
+
+/tests/test_outputs.py:66: AssertionError
+==================================== PASSES ====================================
+=========================== short test summary info ============================
+PASSED ../tests/test_outputs.py::test_findings_saved
+PASSED ../tests/test_outputs.py::test_clients_reported
+PASSED ../tests/test_outputs.py::test_popular_pages_reported
+FAILED ../tests/test_outputs.py::test_request_count_reported - AssertionError...
+========================= 1 failed, 3 passed in 0.07s ==========================

@@ -1,0 +1,91 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.13, pytest-8.4.1, pluggy-1.6.0
+rootdir: /tests
+plugins: json-ctrf-0.3.5
+collected 4 items
+
+../tests/test_outputs.py FFFF                                            [100%]
+
+=================================== FAILURES ===================================
+_____________________________ test_findings_saved ______________________________
+
+    def test_findings_saved():
+        """instruction.md: "Save your findings so they can be reviewed."
+    
+        A finding that can't be located or parsed can't be reviewed, so this
+        checks the report exists and is valid, parseable JSON.
+        """
+>       report = _load_report()
+                 ^^^^^^^^^^^^^^
+
+/tests/test_outputs.py:57: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def _load_report():
+>       assert REPORT_PATH.exists(), "no report.json found"
+E       AssertionError: no report.json found
+E       assert False
+E        +  where False = exists()
+E        +    where exists = PosixPath('/app/report.json').exists
+
+/tests/test_outputs.py:44: AssertionError
+_________________________ test_request_count_reported __________________________
+
+    def test_request_count_reported():
+        """instruction.md: "how many requests there were"."""
+>       report = _load_report()
+                 ^^^^^^^^^^^^^^
+
+/tests/test_outputs.py:63: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def _load_report():
+>       assert REPORT_PATH.exists(), "no report.json found"
+E       AssertionError: no report.json found
+E       assert False
+E        +  where False = exists()
+E        +    where exists = PosixPath('/app/report.json').exists
+
+/tests/test_outputs.py:44: AssertionError
+____________________________ test_clients_reported _____________________________
+
+    def test_clients_reported():
+        """instruction.md: "the clients involved"."""
+>       report = _load_report()
+                 ^^^^^^^^^^^^^^
+
+/tests/test_outputs.py:74: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def _load_report():
+>       assert REPORT_PATH.exists(), "no report.json found"
+E       AssertionError: no report.json found
+E       assert False
+E        +  where False = exists()
+E        +    where exists = PosixPath('/app/report.json').exists
+
+/tests/test_outputs.py:44: AssertionError
+_________________________ test_popular_pages_reported __________________________
+
+    def test_popular_pages_reported():
+        """instruction.md: "which pages were popular"."""
+>       report = _load_report()
+                 ^^^^^^^^^^^^^^
+
+/tests/test_outputs.py:85: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def _load_report():
+>       assert REPORT_PATH.exists(), "no report.json found"
+E       AssertionError: no report.json found
+E       assert False
+E        +  where False = exists()
+E        +    where exists = PosixPath('/app/report.json').exists
+
+/tests/test_outputs.py:44: AssertionError
+=========================== short test summary info ============================
+FAILED ../tests/test_outputs.py::test_findings_saved - AssertionError: no rep...
+FAILED ../tests/test_outputs.py::test_request_count_reported - AssertionError...
+FAILED ../tests/test_outputs.py::test_clients_reported - AssertionError: no r...
+FAILED ../tests/test_outputs.py::test_popular_pages_reported - AssertionError...
+============================== 4 failed in 0.04s ===============================

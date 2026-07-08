@@ -1,10 +1,11 @@
 #!/bin/bash
 
+mkdir -p /logs/verifier
+
 # pytest is baked into the environment image (environment/Dockerfile).
-pytest /tests/test_outputs.py -rA
+pytest /tests/test_outputs.py -rA --ctrf /logs/verifier/ctrf.json
 exit_code=$?
 
-mkdir -p /logs/verifier
 if [ "$exit_code" -eq 0 ]; then
   echo 1 > /logs/verifier/reward.txt
 else

@@ -1,6 +1,5 @@
-192.168.0.1 - - [16/Jun/2026:10:00:01 +0000] "GET /index.html HTTP/1.1" 200 1024
-192.168.0.2 - - [16/Jun/2026:10:00:02 +0000] "GET /about.html HTTP/1.1" 200 512
-192.168.0.1 - - [16/Jun/2026:10:00:03 +0000] "GET /index.html HTTP/1.1" 200 1024
-10.0.0.5 - - [16/Jun/2026:10:00:04 +0000] "POST /api/login HTTP/1.1" 401 64
-192.168.0.2 - - [16/Jun/2026:10:00:05 +0000] "GET /index.html HTTP/1.1" 200 1024
-10.0.0.5 - - [16/Jun/2026:10:00:06 +0000] "GET /about.html HTTP/1.1" 200 512
+request_id=req001 client=192.168.0.1 timestamp="08/Jul/2026:05:00:01 +0000" path=/products status=200 user_agent="Mozilla/5.0"
+request_id=req001 client=192.168.0.1 timestamp="08/Jul/2026:05:00:02 +0000" path=/products status=200 user_agent="Mozilla/5.0"
+request_id=req002 client=192.168.0.2 timestamp="08/Jul/2026:05:10:01 +0000" path=/products status=500 user_agent="Chrome"
+request_id=req003 client=10.0.0.5 timestamp="08/Jul/2026:05:20:01 +0000" path=/about.html status=200 user_agent="Firefox"
+request_id=req004 client=10.0.0.5 timestamp="08/Jul/2026:05:30:01 +0000" path=/login status=500 user_agent="Firefox"

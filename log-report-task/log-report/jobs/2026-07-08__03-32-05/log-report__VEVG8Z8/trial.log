@@ -1,3 +1,0 @@
-Building Docker image harbor-prebuilt:harbor-docker-egress-control-sidecar--b1e6760734a9e6f6 from /home/codespace/.local/share/uv/tools/harbor/lib/python3.12/site-packages/harbor/environments/docker/harbor-docker-egress-control-sidecar using /home/codespace/.local/share/uv/tools/harbor/lib/python3.12/site-packages/harbor/environments/docker/harbor-docker-egress-control-sidecar/Dockerfile at 2026-07-08 03:32:06.468443+00:00
-Skipping image OS validation for hb__4f021b4123adfce0ed970ed57486d41a: docker inspect returned 1
-Collecting main service artifacts

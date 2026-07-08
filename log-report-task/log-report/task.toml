@@ -2,19 +2,19 @@ artifacts = ["/app/report.json"]
 
 [task]
 name = "dynamo/log-report"
-description = "Parse an Apache-style access log into a small JSON summary report."
+description = "Recover accurate traffic analytics from an HTTP access log containing retries, timezone variations, and escaped fields."
 
 [metadata]
 category = "data_processing_and_etl"
 subcategory = "text_processing"
 task_objective = ["transform", "generate"]
 artifact_type = ["text_or_log_file", "generated_output_artifact"]
-expert_time_estimate_hours = 0.3
+expert_time_estimate_hours = 1.0
 model_tested = "GPT-5.4"
 agent_tested = "Terminus-2"
-difficulty_explanation = "Parse a small access log and emit summary stats."
-solution_explanation = "Read the log, count requests/unique IPs, find the top path."
-verification_explanation = "Check the report file."
+difficulty_explanation = "The task contains silent correctness traps: duplicate request retries, timezone conversion requirements, and escaped fields. A naive parser produces plausible output but incorrect analytics."
+solution_explanation = "Parse structured log entries, deduplicate request retries, normalize timestamps to UTC, calculate traffic statistics, and generate the required JSON report."
+verification_explanation = "Validate the generated JSON report against expected analytics including request counts, unique clients, popular pages, UTC hourly aggregation, and error rate."
 
 [verifier]
 timeout_sec = 120.0

@@ -1,0 +1,9 @@
+request_id=req001 client=192.168.1.10 timestamp="08/Jul/2026:10:15:00 +0530" method=GET path=/home status=200 agent="Mozilla Chrome"
+
+request_id=req002 client=192.168.1.11 timestamp="08/Jul/2026:10:20:00 +0530" method=GET path=/products status=200 agent="Mozilla Firefox"
+
+request_id=req003 client=192.168.1.10 timestamp="08/Jul/2026:04:00:00 -0400" method=POST path=/login status=401 agent="Mobile Browser"
+
+request_id=req003 client=192.168.1.10 timestamp="08/Jul/2026:04:00:05 -0400" method=POST path=/login status=401 agent="Mobile Browser"
+
+request_id=req004 client=192.168.1.12 timestamp="08/Jul/2026:11:00:00 +0530" method=GET path=/products status=500 agent="Mozilla \"Mobile\" Browser"
